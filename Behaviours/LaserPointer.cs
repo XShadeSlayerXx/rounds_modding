@@ -19,7 +19,7 @@ public class LaserPointer : PlayerHook
 
     public float bullet_gravity = 30f;
 
-    public Vector2 ArenaBounds = new Vector2(100, 100);
+    //public Vector2 ArenaBounds = new Vector2(100, 100);
 
     protected override void Awake()
     {
