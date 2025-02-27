@@ -201,7 +201,23 @@ MonoBehaviour:
   currentCharge: 0
   useCharge: 0
   dontAllowAutoFire: 0
-  objectsToSpawn: []
+  objectsToSpawn:
+  - effect: {fileID: 0}
+    direction: 0
+    spawnOn: 0
+    spawnAsChild: 0
+    numberOfSpawns: 0
+    normalOffset: 0
+    stickToBigTargets: 0
+    stickToAllTargets: 0
+    zeroZ: 0
+    AddToProjectile: {fileID: 4630170483632547331, guid: be136d670edb9b240b68699115b15b11,
+      type: 3}
+    removeScriptsFromProjectileObject: 0
+    scaleStacks: 0
+    scaleStackM: 0
+    scaleFromDamage: 0
+    stacks: 0
   projectileColor: {r: 0, g: 0, b: 0, a: 1}
   waveMovement: 1
   teleport: 0
