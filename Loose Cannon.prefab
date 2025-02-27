@@ -87,7 +87,7 @@ MonoBehaviour:
     simepleAmount: 3
     stat: Damage
   - positive: 1
-    amount: +50%
+    amount: +100%
     simepleAmount: 3
     stat: Knockback
   - positive: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   reloadTime: 1
   reloadTimeAdd: 0.25
   recoilMuiltiplier: 1
-  knockback: 1.5
+  knockback: 2
   attackSpeed: 1
   projectileSpeed: 1
   projectielSimulatonSpeed: 1
