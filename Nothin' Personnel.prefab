@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4059372422215643}
-  - component: {fileID: 114190967632551620}
   - component: {fileID: 114554239418549338}
   - component: {fileID: 114421384111938668}
   - component: {fileID: 114081461618018503}
@@ -18,7 +17,7 @@ GameObject:
   - component: {fileID: 114969577739340399}
   - component: {fileID: 114193385136356738}
   m_Layer: 0
-  m_Name: TemplateCard
+  m_Name: Nothin' Personnel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,19 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
---- !u!114 &114190967632551620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043437007509817}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b2bbcc09027464da20acbbb271927e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rarityName: Common
 --- !u!114 &114554239418549338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,10 +65,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDisableBlockBasic: 0
-  cardName: 
-  cardDestription: 
-  cardStats: []
-  rarity: 0
+  cardName: Nothin' Personnel
+  cardDestription: '*Teleports behind you*'
+  cardStats:
+  - positive: 1
+    amount: Teleport
+    simepleAmount: 0
+    stat: behind an enemy
+  - positive: 0
+    amount: -10%
+    simepleAmount: 2
+    stat: Block Cooldown
+  rarity: 2
   cardArt: {fileID: 0}
   sprite: {fileID: 21300000, guid: 5b742d082ddefaa489468fac5e1e3bff, type: 2}
   sourceCard: {fileID: 0}
@@ -91,7 +85,7 @@ MonoBehaviour:
   allowMultiple: 0
   blacklistedCategories: []
   cardBase: {fileID: 1720757555582362, guid: ab7829e25091330408953c12456bfb86, type: 3}
-  colorTheme: 0
+  colorTheme: 8
 --- !u!114 &114081461618018503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundCharacterSlowFreeze: {fileID: 0}
-  AddObjectToPlayer: {fileID: 0}
+  AddObjectToPlayer: {fileID: 1960312666480894928, guid: 56b625e3e8334e9448bd1ead63f04fe2,
+    type: 3}
   objectsAddedToPlayer: []
   sizeMultiplier: 1
   health: 1
@@ -249,7 +244,7 @@ MonoBehaviour:
   blockedPart: {fileID: 0}
   cooldown: 0
   counter: 1000
-  cdMultiplier: 1
+  cdMultiplier: 0.9
   cdAdd: 0
   forceToAdd: 0
   forceToAddUp: 0

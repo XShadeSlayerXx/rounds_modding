@@ -21,6 +21,7 @@ public class NothinPersonnel : PlayerHook
             if (other != null)
             {
                 currentCooldown = maxCooldown + Time.time;
+                GetComponentInParent<PlayerCollision>().IgnoreWallForFrames(2);
                 Vector3 position = other.transform.position + other.transform.forward * -distanceBehind;
                 player.transform.position = position;
             }
