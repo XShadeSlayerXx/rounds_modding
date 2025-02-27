@@ -1,0 +1,25 @@
+{
+    "name": "ShadeCards",
+    "references": [
+        "UnboundLib",
+        "ModdingUtils",
+        "ModsPlus",
+        "ProjectileChargePatch",
+        "ClassesManagerReborn",
+        "Unity.TextMeshPro"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "0Harmony.dll",
+        "BepInEx.dll",
+        "Assembly-CSharp.dll",
+        "PhotonUnityNetworking.dll",
+        "SonigonAudioEngine.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

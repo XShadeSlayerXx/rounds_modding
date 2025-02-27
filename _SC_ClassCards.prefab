@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3805226397029728115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2820944506405526832}
+  - component: {fileID: 114835710586523542}
+  m_Layer: 0
+  m_Name: _SC_ClassCards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2820944506405526832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805226397029728115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114835710586523542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805226397029728115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cacd0d1da003c849a71b6c509d18a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cards:
+  - {fileID: 1043437007509817, guid: 38e154ddb986947438c9dd4677516be0, type: 3}
+  - {fileID: 1043437007509817, guid: 5070ed17c3d83e849b948a602ed608d5, type: 3}
+  - {fileID: 1043437007509817, guid: f469f7c8993678441b141212ba67cbb7, type: 3}
+  - {fileID: 1043437007509817, guid: 56555d353d0049e44b84018d9cfa2939, type: 3}
+  - {fileID: 1043437007509817, guid: 288c64ae647b52c459c2a5a0c5ffcda9, type: 3}
+  - {fileID: 1043437007509817, guid: 6663cd4e5df36c9429fae572b9d5032b, type: 3}
+  - {fileID: 1043437007509817, guid: dee7cad5a7de29e4ca2e29ac1a400350, type: 3}
+  - {fileID: 1043437007509817, guid: 6602ca427ef87994ba02527da5695dd2, type: 3}
+  - {fileID: 1043437007509817, guid: 5702db69da8a23b42a7a821642e376c4, type: 3}
+  HiddenCards: []
