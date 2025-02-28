@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
-  variableDamageMin: 0
-  variableDamageMax: 1.5
+  variableDamageMin: 0.75
+  variableDamageMax: 2
   normalizeDamage: 1
