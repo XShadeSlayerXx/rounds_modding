@@ -6,7 +6,6 @@ using UnityEngine;
 using Shade.Extensions;
 using System;
 using UnboundLib;
-using static Shade.Patches.Gun_Patch;
 
 namespace Shade.Patches
 {
@@ -14,16 +13,6 @@ namespace Shade.Patches
     [HarmonyPatch(typeof(Gun))]
     internal class Gun_Patch
     {
-        [HarmonyPatch("ApplyProjectileStats")]
-        public static void Prefix(Gun __instance, ref float damageM)
-        {
-            if (__instance.GenAdditionalData().variableDamage > 0)
-            {
-                var amt = __instance.GenAdditionalData().variableDamage;
-                damageM *= Mathf.Max(UnityEngine.Random.Range(-amt, 1+amt), UnityEngine.Random.Range(-amt, 1+amt));
-                //UnityEngine.Debug.Log($"Damage Mult should be: {damageM}");
-            }
-        }
         [HarmonyPostfix]
         [HarmonyPatch("ApplyProjectileStats")]
         public static void APS_Postfix(Gun __instance, GameObject obj)
@@ -35,24 +24,6 @@ namespace Shade.Patches
                 {
                     comp.multiplier = __instance.GenAdditionalData().cosAmplitude;
                 }
-            }
-        }
-
-        internal class gunStats
-        {
-            public int numberOfProjectiles = 0;
-            public int attacks = 0;
-            public int bursts = 0;
-            public ProjectilesToSpawn[] projectilesToSpawn;
-            //public int projectiles = 0;
-
-            public gunStats(int numberOfProjectiles, int attacks, int bursts, ProjectilesToSpawn[] projectilesToSpawn)
-            {
-                this.numberOfProjectiles = numberOfProjectiles;
-                this.attacks = attacks;
-                this.bursts = bursts;
-                this.projectilesToSpawn = projectilesToSpawn;
-                //this.projectiles = projectiles;
             }
         }
 
