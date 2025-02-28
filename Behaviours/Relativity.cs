@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using ModsPlus;
-using Photon.Pun.Simple;
 using UnityEngine;
 
 public class Relativity : PlayerHook
@@ -13,6 +10,9 @@ public class Relativity : PlayerHook
 
     const float upgradeDamage = 1.5f;
     const float upgradeReload = 2f;
+
+    StatChanges statChanges = null;
+    StatChangeTracker statChangeTracker = null;
 
     protected override void Awake()
     {
@@ -26,28 +26,28 @@ public class Relativity : PlayerHook
             // destroy this effect
             Destroy(gameObject);
         }
+        if (statChanges == null)
+        {
+            UpdateStats();
+        }
     }
 
     void Upgrade()
     {
         maxDamageMult += upgradeDamage;
         maxReloadRate += upgradeReload;
+        UpdateStats();
     }
 
-    public override void OnShoot(GameObject projectile)
+    void UpdateStats()
     {
-        if (gun)
+        if (statChangeTracker != null) { StatManager.Remove(statChangeTracker); }
+        var spd = gun.projectielSimulatonSpeed * gun.projectileSpeed;
+        statChanges = new StatChanges
         {
-            ProjectileHit hit = projectile.GetComponent<ProjectileHit>();
-            var spd = gun.projectielSimulatonSpeed * gun.projectileSpeed;
-            if (spd < 1)
-            {
-                hit.dealDamageMultiplierr += Mathf.Min((bulletSpeedCutoff - spd / 2) * maxDamageMult, maxDamageMult);
-            }
-            else
-            {
-                gun.sinceAttack += gun.defaultCooldown / Mathf.Min((spd - bulletSpeedCutoff) * maxReloadRate, maxReloadRate);
-            }
-        }
+            Damage = spd > 1 ? Mathf.Min((bulletSpeedCutoff - spd / 2) * maxDamageMult, maxDamageMult) : 1,
+            AttackSpeed = spd < 1 ? gun.defaultCooldown / Mathf.Min((spd - bulletSpeedCutoff) * maxReloadRate, maxReloadRate) : 1,
+        };
+        statChangeTracker = StatManager.Apply(player, statChanges);
     }
 }
