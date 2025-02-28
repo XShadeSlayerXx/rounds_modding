@@ -83,8 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundCharacterSlowFreeze: {fileID: 0}
-  AddObjectToPlayer: {fileID: 335472007081406801, guid: 6bd2924d0d358ef4982cf804bb585f79,
-    type: 3}
+  AddObjectToPlayer: {fileID: 0}
   objectsAddedToPlayer: []
   sizeMultiplier: 1
   health: 1
@@ -193,7 +192,23 @@ MonoBehaviour:
   currentCharge: 0
   useCharge: 0
   dontAllowAutoFire: 0
-  objectsToSpawn: []
+  objectsToSpawn:
+  - effect: {fileID: 0}
+    direction: 0
+    spawnOn: 0
+    spawnAsChild: 0
+    numberOfSpawns: 0
+    normalOffset: 0
+    stickToBigTargets: 0
+    stickToAllTargets: 0
+    zeroZ: 0
+    AddToProjectile: {fileID: 335472007081406801, guid: 6bd2924d0d358ef4982cf804bb585f79,
+      type: 3}
+    removeScriptsFromProjectileObject: 0
+    scaleStacks: 0
+    scaleStackM: 0
+    scaleFromDamage: 0
+    stacks: 0
   projectileColor: {r: 0, g: 0, b: 0, a: 1}
   waveMovement: 0
   teleport: 0
