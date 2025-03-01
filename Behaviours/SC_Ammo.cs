@@ -9,7 +9,6 @@ public class SC_Ammo : SupportClass
 {
     protected override void updateStats()
     {
-        canApplyMultipleTimes = true;
         teamStatEffects = new Shade_StatChanges
         {
             MaxAmmo = 2,

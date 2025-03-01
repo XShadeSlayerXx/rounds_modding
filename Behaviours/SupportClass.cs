@@ -4,6 +4,7 @@ using UnityEngine;
 using Shade.Extensions;
 using UnboundLib.GameModes;
 using Shade;
+using ModdingUtils.MonoBehaviours;
 
 public class SupportClass : PlayerHook
 {
@@ -12,16 +13,17 @@ public class SupportClass : PlayerHook
     protected float teamDmgMlt = .5f;
     
     [SerializeField]
-    protected float statDuration = 15f;
+    protected float statDuration = 5f;
 
     [SerializeField]
-    protected float statCooldown = 0f;
+    protected float statCooldown = 10f;
 
     //[SerializeField]
     protected Shade_StatChanges teamStatEffects;// = new StatChanges();
+    private ColorEffect colorEffect = null;
 
     [SerializeField]
-    protected bool canApplyMultipleTimes = true;
+    protected bool canApplyMultipleTimes = false;
 
     protected bool canApplyEffect = true;
 
@@ -58,7 +60,10 @@ public class SupportClass : PlayerHook
     protected override void OnDestroy()
     {
         base.OnDestroy();
-
+        if (colorEffect != null)
+        {
+            Destroy(colorEffect); colorEffect = null;
+        }
         gun.GenAdditionalData().teamDamageMultiplier /= teamDmgMlt;
         //gun.GenAdditionalData().teamDamageMultiplier /= Mathf.Pow(teamDmgMlt, numCards);
     }
@@ -72,10 +77,14 @@ public class SupportClass : PlayerHook
         {
             Player other = hit.collider.gameObject.GetComponentInChildren<Player>();
             Shade_StatChangeTracker effect = Apply(other, teamStatEffects);
+            colorEffect = player.gameObject.AddComponent<ReversibleColorEffect>();
+            colorEffect.SetColor(Color.green);
             Shade.Debug.Log($"{teamStatEffects} => {teamStatEffects.MyToString()}\nRevives: {characterStats.respawns}");
             canApplyEffect = canApplyMultipleTimes;
             yield return new WaitForSeconds(statDuration);
             Remove(effect);
+            Destroy(colorEffect);
+            colorEffect = null;
             Shade.Debug.Log($"finished {teamStatEffects}\nRevives: {characterStats.respawns}");
             yield return new WaitForSeconds(statCooldown);
             canApplyEffect = true;

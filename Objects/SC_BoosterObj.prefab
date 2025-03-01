@@ -44,19 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamDmgMlt: 0.5
-  statDuration: 15
-  teamStatEffects:
-    Bullets: 0
-    Jumps: 0
-    MaxAmmo: 0
-    AttackSpeed: 1
-    PlayerGravity: 1
-    MovementSpeed: 1
-    ProjectileGravity: 1
-    Damage: 1
-    PlayerSize: 1
-    MaxHealth: 1.3
-    BulletSpread: 1
-    BulletSpeed: 1
-    JumpHeight: 1
+  statDuration: 5
+  statCooldown: 10
   canApplyMultipleTimes: 0

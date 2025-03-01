@@ -43,3 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72e2409e9cb764d96c4ac10ad0e56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamDmgMlt: 0.5
+  statDuration: 5
+  statCooldown: 10
+  canApplyMultipleTimes: 1

@@ -9,7 +9,7 @@ public class SC_Frenzy : SupportClass
 {
     protected override void updateStats()
     {
-        statDuration = 10f;
+        statDuration = 5f;
         teamStatEffects = new Shade_StatChanges
         {
             AttackSpeed = 1.5f,

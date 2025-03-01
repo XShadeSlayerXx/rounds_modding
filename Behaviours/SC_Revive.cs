@@ -8,7 +8,7 @@ public class SC_Revive : SupportClass
     protected override void updateStats()
     {
         statDuration = 5f;
-        statCooldown = 7f;
+        statCooldown = 10f;
         canApplyMultipleTimes = false;
         // why did they forget to reset "remainingRespawns" in ModdingUtils.Extensions.TemporaryModifiers.cs
         teamStatEffects = new Shade_StatChanges

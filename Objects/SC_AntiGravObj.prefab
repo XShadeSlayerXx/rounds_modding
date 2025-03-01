@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamDmgMlt: 0.5
-  statDuration: 15
+  statDuration: 5
+  statCooldown: 10
   canApplyMultipleTimes: 0

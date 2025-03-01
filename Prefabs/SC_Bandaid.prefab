@@ -68,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundDisableBlockBasic: 0
   cardName: Bandaid Solution
-  cardDestription: Shoot teammates to give them 10s of Decay!
+  cardDestription: Shoot teammates to give them 5s of Decay!
   cardStats:
   - positive: 1
     amount: 1/2
@@ -86,6 +86,10 @@ MonoBehaviour:
     amount: +0.25
     simepleAmount: 1
     stat: Reload Time
+  - positive: 0
+    amount: 10s
+    simepleAmount: 2
+    stat: Ability Cooldown
   rarity: 0
   cardArt: {fileID: 0}
   sprite: {fileID: 21300000, guid: 5b742d082ddefaa489468fac5e1e3bff, type: 2}

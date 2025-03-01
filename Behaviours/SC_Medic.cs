@@ -11,8 +11,8 @@ public class SC_Medic : SupportClass
     {
         teamStatEffects = new Shade_StatChanges
         {
-            MaxHealth = 1.5f,
-            regen_add = 3,
+            MaxHealth = 1.75f,
+            regen_add = 5 + gun.damage/55f,
             //projectileColor = Color.green
         };
     }

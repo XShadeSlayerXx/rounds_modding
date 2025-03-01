@@ -11,7 +11,7 @@ public class SC_Bandaid : SupportClass
     {
         teamStatEffects = new Shade_StatChanges
         {
-            decay_add = 10
+            decay_add = 5
         };
     }
 }
