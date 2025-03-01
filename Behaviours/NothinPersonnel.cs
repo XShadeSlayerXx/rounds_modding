@@ -10,7 +10,6 @@ public class NothinPersonnel : PlayerHook
     public float maxCooldown = 5f;
     protected float currentCooldown = 0;
 
-    protected float distanceBehind = 3f;
     //on block, teleport behind the nearest enemy player
     public override void OnBlock(BlockTrigger.BlockTriggerType blockTriggerType)
     {
@@ -22,7 +21,7 @@ public class NothinPersonnel : PlayerHook
             {
                 currentCooldown = maxCooldown + Time.time;
                 GetComponentInParent<PlayerCollision>().IgnoreWallForFrames(2);
-                Vector3 position = other.transform.position + other.transform.forward * -distanceBehind;
+                Vector3 position = other.transform.position + other.transform.forward;
                 player.transform.position = position;
             }
             else

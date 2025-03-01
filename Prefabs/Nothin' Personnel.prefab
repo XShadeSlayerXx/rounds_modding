@@ -66,16 +66,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundDisableBlockBasic: 0
   cardName: Nothin' Personnel
-  cardDestription: '*Teleports behind you*'
+  cardDestription: '*Teleports behind you*
+
+    Block to activate'
   cardStats:
   - positive: 1
     amount: Teleport
     simepleAmount: 0
     stat: behind an enemy
   - positive: 0
-    amount: -10%
+    amount: 5s
     simepleAmount: 2
-    stat: Block Cooldown
+    stat: Ability Cooldown
   rarity: 2
   cardArt: {fileID: 0}
   sprite: {fileID: 21300000, guid: 5b742d082ddefaa489468fac5e1e3bff, type: 2}
@@ -244,7 +246,7 @@ MonoBehaviour:
   blockedPart: {fileID: 0}
   cooldown: 0
   counter: 1000
-  cdMultiplier: 0.9
+  cdMultiplier: 1
   cdAdd: 0
   forceToAdd: 0
   forceToAddUp: 0
