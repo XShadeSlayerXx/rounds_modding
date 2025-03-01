@@ -53,17 +53,17 @@ MonoBehaviour:
   cardDestription: It all depends on your bullet speed.
   cardStats:
   - positive: 1
-    amount: Up to 50%
+    amount: +50%
     simepleAmount: 2
-    stat: (Slow) Damage
-  - positive: 0
-    amount: or
-    simepleAmount: 0
-    stat: 
+    stat: Damage (Slow)
   - positive: 1
-    amount: Up to 100%
+    amount: +50%
+    simepleAmount: 2
+    stat: Movespeed (Neutral)
+  - positive: 1
+    amount: +100%
     simepleAmount: 3
-    stat: (Fast) Fire Rate
+    stat: Fire Rate (Fast)
   rarity: 0
   cardArt: {fileID: 0}
   sprite: {fileID: 21300000, guid: 5b742d082ddefaa489468fac5e1e3bff, type: 2}
