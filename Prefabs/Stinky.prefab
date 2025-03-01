@@ -52,10 +52,10 @@ MonoBehaviour:
   cardName: Stinky
   cardDestription: 'Lighten up after using your entire clip.
 
-    Stacks up to 3x, 6 second duration by default.'
+    Stacks up to 3x per round.'
   cardStats:
   - positive: 1
-    amount: +20%
+    amount: +33%
     simepleAmount: 3
     stat: Movespeed/Stack
   rarity: 0
