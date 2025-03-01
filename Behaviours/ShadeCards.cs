@@ -27,7 +27,7 @@ namespace Shade
     {
         internal const string ModId = "shade.plugin.trinkets";
         internal const string modName = "Shade's Trinkets";
-        internal const string version = "0.1.6";
+        internal const string version = "0.2.0";
 
         internal static string modInitials = "ST";
         internal static AssetBundle assets = Jotunn.Utils.AssetUtils.LoadAssetBundleFromResources("shadecards", typeof(ShadeCards).Assembly);
