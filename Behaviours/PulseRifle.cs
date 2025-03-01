@@ -26,7 +26,7 @@ public class PulseRifle : MonoBehaviour
     //internal int chargeThresh; //reset to 0
     internal float startChargeAmmo;
     //speed multiplier on fireRate
-    internal float chargeSpeed  = 7f;
+    internal float chargeSpeed  = 5f;
     //maxCharge based on ammo count
     internal float maxCharge = 3f;
     internal float bulletsToRemove = 0f;

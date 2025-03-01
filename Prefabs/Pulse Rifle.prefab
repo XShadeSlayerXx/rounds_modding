@@ -66,20 +66,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundDisableBlockBasic: 0
   cardName: Pulse Rifle
-  cardDestription: Charge Shots!
+  cardDestription: Charge Shots! Charge up your gun to shoot a lot of strong bullets!
   cardStats:
   - positive: 1
     amount: +1
     simepleAmount: 3
     stat: Chargeability
   - positive: 1
-    amount: 1
+    amount: Up to 60%
     simepleAmount: 2
-    stat: Burst
-  - positive: 1
-    amount: Up to 100%
-    simepleAmount: 2
-    stat: More DMG
+    stat: DMG and Bullets
   - positive: 0
     amount: +0.5
     simepleAmount: 3
@@ -203,7 +199,7 @@ MonoBehaviour:
   percentageDamage: 0
   cos: 0
   slow: 0
-  chargeDamageMultiplier: 0.33
+  chargeDamageMultiplier: 0.2
   chargeSpreadTo: 0
   chargeEvenSpreadTo: 0.1
   chargeSpeedTo: 0.75
