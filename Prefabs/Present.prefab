@@ -53,13 +53,9 @@ MonoBehaviour:
   cardDestription: I have something for you!
   cardStats:
   - positive: 1
-    amount: +50%
+    amount: +50% to +100%
     simepleAmount: 3
     stat: Damage
-  - positive: 1
-    amount: Up to +50%
-    simepleAmount: 2
-    stat: More Damage
   rarity: 1
   cardArt: {fileID: 0}
   sprite: {fileID: 21300000, guid: 5b742d082ddefaa489468fac5e1e3bff, type: 2}
