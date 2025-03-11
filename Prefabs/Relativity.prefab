@@ -59,7 +59,7 @@ MonoBehaviour:
   - positive: 1
     amount: +50%
     simepleAmount: 2
-    stat: Movespeed (Neutral)
+    stat: Speed (Neutral)
   - positive: 1
     amount: +100%
     simepleAmount: 3
