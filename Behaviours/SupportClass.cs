@@ -77,7 +77,7 @@ public class SupportClass : PlayerHook
         {
             Player other = hit.collider.gameObject.GetComponentInChildren<Player>();
             Shade_StatChangeTracker effect = Apply(other, teamStatEffects);
-            colorEffect = player.gameObject.AddComponent<ReversibleColorEffect>();
+            colorEffect = other.gameObject.AddComponent<ReversibleColorEffect>();
             colorEffect.SetColor(Color.green);
             Shade.Debug.Log($"{teamStatEffects} => {teamStatEffects.MyToString()}\nRevives: {characterStats.respawns}");
             canApplyEffect = canApplyMultipleTimes;
