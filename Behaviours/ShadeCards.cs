@@ -21,6 +21,8 @@ namespace Shade
     [BepInDependency("Root.Gun.bodyRecoil.Patch", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("com.rounds.willuwontu.gunchargepatch", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("root.classes.manager.reborn", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("root.cardtheme.lib", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("com.willis.rounds.modsplus", BepInDependency.DependencyFlags.HardDependency)]
     [BepInPlugin(ModId, modName, version)]
     [BepInProcess("Rounds.exe")]
     public class ShadeCards : BaseUnityPlugin
